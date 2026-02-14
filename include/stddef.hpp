@@ -1,14 +1,14 @@
 #ifndef STDDEF_HPP
 #define STDDEF_HPP
-#include<cstddef>
-#include<cstdint>
+#include <cstddef>
+#include <cstdint>
 
 /* Base type definitions */
 
 using uchar   = uint8_t;
-using ushort  = unsigned long;
+using ushort  = uint16_t;
 using uint    = uint32_t;
-using ulong   = uint32_t;
+using ulong   = uint64_t;
 
 
 /* Function declaration return types */
@@ -26,7 +26,7 @@ using tid_type   = int32_t;
 
 constexpr int OK      = 1;
 constexpr int SYSERR  = -1;
-constexpr int EOF     = -2;
+constexpr int YEOF    = -2;  // Renamed from EOF to avoid conflict with standard library
 constexpr int TIMEOUT = -3;
 constexpr int NOMSG   = -4;
 
