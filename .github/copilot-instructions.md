@@ -10,17 +10,18 @@
 - **Always use `/* */` block comment format** for all comments
 - Comments must be placed **above** the code they describe
 - Use **double spacing** (two spaces) for indentation
+- Add two spaces after `/*` and before `*/` for readability: `/*  comment text  */`
 - Comments should be clear, concise, and explain the "why" rather than the "what"
 
 ### Example Comment Style
 ```cpp
 /*  This function initializes the memory management system  */
 void initMemory() {
-  /*  Allocate the initial memory pool  */
-  void* pool = malloc(POOL_SIZE);
+  /*  Allocate the initial memory pool using smart pointer  */
+  auto pool = std::make_unique<std::byte[]>(POOL_SIZE);
   
   /*  Set up memory tracking structures  */
-  setupTracking(pool);
+  setupTracking(pool.get());
 }
 ```
 

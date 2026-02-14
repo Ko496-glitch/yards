@@ -20,6 +20,7 @@ This document outlines the coding standards and practices for the Yards project.
 - **Never use `//` single-line comments**
 - Comments must be placed **on top** of (above) the code they describe
 - Add a blank line between comment and the previous code block for readability
+- **Add two spaces after `/*` and before `*/`** for readability: `/*  comment text  */`
 
 #### Comment Examples
 
